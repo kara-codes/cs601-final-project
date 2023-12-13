@@ -32,7 +32,7 @@ var elUserName = document.getElementById('username');
 function validateNameLength(minLength) {
     var elMsg = document.getElementById('userFeedback1');
     if (elUserName.value.length < minLength) {
-        elMsg.textContent = "Error! Name must be 2 or more characters.";
+        elMsg.textContent = "Error! Name must be 1 or more characters.";
         return false;
     }
     else {
