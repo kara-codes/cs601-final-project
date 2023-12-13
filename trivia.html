@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CS601 Term Project</title>
+        <link href="css/styles.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <a href="index.html" class="nav">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Professional
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="professional/resume.html" class="nav">Resume</a>
+                        <a href="professional/classes.html" class="nav">Classes</a>
+                    </div>
+                </div>
+                <a href="baking.html" class="nav">Baking</a>   
+                <a class="current">Trivia</a>
+            </div>
+            <p class="name" 
+                onmouseover="this.style.color='gold';" 
+                onmouseout="this.style.color='cornsilk';"
+            >Kara Ingraham</p>
+        </header>
+        <hr class="divider"/> 
+        <div class="title">
+            <img src="images/small-stars.jpg" class="left"/> 
+            <h1>Trivia</h1>
+            <img src="images/small-stars.jpg" class="right"/>
+        </div>
+        <form id="trivia">
+            <p>Answer the following questions to test your knowledge of software trivia.</p>
+            <br /> 
+            <button id="start">Start</button>
+            <p>
+                <label for="username">Name:</label>
+                <input type="text" id="username" name="username" required>
+            </p><br>
+            <div id="userFeedback1" class="error"></div>
+            <div id="userFeedback2" class="error"></div>
+            <fieldset>
+            <div id="quiz-container"></div>
+
+            <input type="submit" id="submit" value="Submit" disabled>
+            </fieldset>
+        </form>
+        <script src="js/utilities.js"></script>
+        <script src="js/validation.js"></script>
+        <script src="js/score-trivia.js"></script>
+    </body>
+</html>

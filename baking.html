@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CS601 Term Project</title>
+        <style>
+            @import '/css/styles.css';
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+    </head>
+    <body>
+        <div id="app">
+            <header>
+            <div class="navbar">
+                <a href="index.html" class="nav">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Professional
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="professional/resume.html" class="nav">Resume</a>
+                        <a href="professional/classes.html" class="nav">Classes</a>
+                    </div>
+                </div>
+                <a class="current">Baking</a>   
+                <a href="trivia.html" class="nav">Trivia</a>
+            </div>
+            <p class="name" 
+                onmouseover="this.style.color='gold';" 
+                onmouseout="this.style.color='cornsilk';"
+            >Kara Ingraham</p>
+            </header>
+            <hr class="divider"/> 
+            <div class="title">
+                <img src="/images/small-stars.jpg" alt="small stars" class="left"/> 
+                <h1>Baking Gallery</h1>
+                <img src="/images/small-stars.jpg" alt="small stars" class="right"/>
+            </div>
+            <div class="slideshow">
+                <div class="baking"><img :src="currentImage" alt="slideshow image" id="baking"/></div>
+                <button @click="prevImage()" class="prev">Previous</button>
+                <button @click="nextImage()" class="next">Next</button>
+            </div>
+        </div>
+        <script src="js/app.js"></script>
+    </body>
+</html>
